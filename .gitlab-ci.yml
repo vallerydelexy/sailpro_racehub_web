@@ -1,0 +1,18 @@
+stages:
+  - deploy
+
+deploy-to-host:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - apk add --no-cache git
+    - echo "Melakukan pull di server host..."
+    - cd /apps/web/sailpro_rh
+    - git remote set-url origin https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.logixone.cloud/sailpro/racehub-web-deployment.git
+    - git pull origin dev
+    - echo "Update selesai."
+  only:
+    - dev
+  tags:
+  - cicd
+

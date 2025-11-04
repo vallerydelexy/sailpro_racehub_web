@@ -7482,6 +7482,8 @@ SOFTWARE.
 
 --------------------------------------------------------------------------------
 dbus
+geoclue
+gsettings
 
 Mozilla Public License Version 2.0
 ==================================
@@ -11639,6 +11641,7 @@ Software.
 geolocator
 geolocator_android
 geolocator_apple
+geolocator_linux
 geolocator_platform_interface
 geolocator_web
 geolocator_windows
